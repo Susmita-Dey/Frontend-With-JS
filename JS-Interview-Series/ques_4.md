@@ -7,10 +7,11 @@ import React, { useState, useEffect } from 'react';
 
 function Counter(){
     const [value, setValue] = useState(1);
-    const [multipliedValue, setMultipliedValue] = useState(1);
+    // const [multipliedValue, setMultipliedValue] = useState(1);
+    let multipliedValue = value*5;
 
     const multiplybyfive = () => {
-        setMultipliedValue(value * 5);
+        // setMultipliedValue(value * 5);
         setValue(value + 1);
     }
 
@@ -24,3 +25,9 @@ function Counter(){
 }
 export default Counter;
 ```
+
+### Note:
+- It is always not necessary to use `useState` for every value. You can use a normal variable as well.
+- Rewatch: https://www.youtube.com/watch?v=P4X0vPTQX4A (if needed)
+- Understand mounting and unmounting of components.
+- Understand the difference between `useState` and normal variables.
